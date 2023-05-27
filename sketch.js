@@ -2,6 +2,7 @@
 const minNumber = 1;
 const maxNumber = 18;
 let randomNumber = null;
+let generateButton;
 
 // p5.js setup function
 function setup() {
@@ -10,8 +11,9 @@ function setup() {
   textAlign(CENTER, CENTER);
   frameRate(1);
 
-  let generateButton = createButton('Generate Random Number');
-  generateButton.position(20, 20);
+  generateButton = createButton('Generate Random Number');
+  generateButton.addClass('generate-button');
+  generateButton.position(width / 2 - generateButton.width / 2, height / 2 + 100);
   generateButton.mousePressed(generateRandomNumber);
 }
 
@@ -35,7 +37,7 @@ function draw() {
     textSize(size);
 
     // Display the modified text on the screen
-    text("Mr. Gallant's Random Number Generator", width / 2, height / 2 + 100);
+    text("Mr. Gallant's Random Number Generator", width / 2, height / 2 - 100);
     text('Random Number: ' + randomNumber, width / 2, height / 2);
   }
 }
@@ -55,3 +57,5 @@ function setGradient(x, y, w, h, color1, color2) {
     line(x, i, x + w, i);
   }
 }
+
+
