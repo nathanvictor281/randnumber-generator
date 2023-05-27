@@ -8,11 +8,13 @@ function setup() {
 
 // Generate a random number
 function generateRandomNumber() {
-  const minNumber = select('#minNumber').value();
-  const maxNumber = select('#maxNumber').value();
+  const minNumber = parseInt(select('#minNumber').value());
+  const maxNumber = parseInt(select('#maxNumber').value());
 
   const randomNumber = Math.floor(random(minNumber, maxNumber + 1));
   
   const numberDisplay = select('#numberDisplay');
   numberDisplay.html(randomNumber);
 }
+
+
