@@ -1,80 +1,27 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-  <title>Random Number Generator</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      text-align: center;
-    }
-
-    .title {
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    .input-container {
-      margin-bottom: 10px;
-    }
-
-    .input-label {
-      font-size: 20px;
-      margin-right: 10px;
-    }
-
-    .number-input {
-      padding: 10px;
-      font-size: 18px;
-      border: none;
-      border-radius: 5px;
-      text-align: center;
-    }
-
-    .generate-button {
-      padding: 10px 20px;
-      font-size: 20px;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
-
-    .number-display {
-      margin-top: 20px;
-      font-size: 48px;
-      font-weight: bold;
-      color: #333;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1 class="title">Random Number Generator</h1>
-    <div class="input-container">
-      <label class="input-label">Minimum:</label>
-      <input type="number" id="minNumber" class="number-input" min="0" step="1" value="1">
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <title>Random Number Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Random Number Generator</h1>
+      <div class="input-container">
+        <label class="input-label">Minimum:</label>
+        <input type="number" id="minNumber" class="number-input" min="0" step="1" value="1">
+      </div>
+      <div class="input-container">
+        <label class="input-label">Maximum:</label>
+        <input type="number" id="maxNumber" class="number-input" min="0" step="1" value="18">
+      </div>
+      <button id="generateButton" class="generate-button">Generate Random Number</button>
+      <div id="numberDisplay" class="number-display"></div>
     </div>
-    <div class="input-container">
-      <label class="input-label">Maximum:</label>
-      <input type="number" id="maxNumber" class="number-input" min="0" step="1" value="18">
-    </div>
-    <button id="generateButton" class="generate-button">Generate Random Number</button>
-    <div id="numberDisplay" class="number-display"></div>
-  </div>
-  <script src="sketch.js"></script>
-</body>
+    <script src="sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
 </html>
